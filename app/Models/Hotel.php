@@ -6,11 +6,11 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
-class User extends Model
+class Hotel extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['name', 'email', 'password', 'phone_number'];
+    protected $fillable = ['name', 'location', 'image'];
 
     public function bookings(): HasMany
     {
