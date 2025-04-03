@@ -313,7 +313,7 @@
 <div class="hotels-horizontal">
     @foreach($featuredHotels as $hotel)
     <div class="hotel-card-horizontal">
-        <img src="{{ asset($hotel->image) }}" class="card-img-top" alt="{{ $hotel->name }}">
+        <img src="{{ asset('storage/' . $hotel->image) }}" class="card-img-top" alt="{{ $hotel->name }}">
         <div class="card-body">
             <h5 class="card-title">{{ $hotel->name }}</h5>
             <p class="card-text">

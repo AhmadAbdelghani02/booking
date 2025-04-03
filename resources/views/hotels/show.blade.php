@@ -254,12 +254,12 @@
                                 @if($hotel->images->count() > 0)
                                     @foreach($hotel->images as $key => $image)
                                         <div class="carousel-item {{ $key == 0 ? 'active' : '' }}">
-                                            <img src="{{ asset($image->image) }}" class="d-block w-100" alt="{{ $hotel->name }}">
+                                            <img src="{{ asset('storage/' . $image->image) }}" class="d-block w-100" alt="{{ $hotel->name }}">
                                         </div>
                                     @endforeach
                                 @else
                                     <div class="carousel-item active">
-                                        <img src="{{ asset($hotel->image) }}" class="d-block w-100" alt="{{ $hotel->name }}">
+                                        <img src="{{ asset('storage/' . $hotel->image) }}" class="d-block w-100" alt="{{ $hotel->name }}">
                                     </div>
                                 @endif
                             </div>
@@ -538,7 +538,7 @@
                 @foreach($similarHotels as $similarHotel)
                 <div class="col">
                     <div class="card h-100 hotel-card">
-                        <img src="{{ asset($similarHotel->image) }}" class="card-img-top similar-hotel-img" alt="{{ $similarHotel->name }}">
+                        <img src="{{ asset('storage/' . $similarHotel->image) }}" class="card-img-top similar-hotel-img" alt="{{ $similarHotel->name }}">
                         <div class="card-body">
                             <h5 class="card-title"><i class="fas fa-hotel text-primary me-1"></i> {{ $similarHotel->name }}</h5>
                             <p class="card-text mb-1">
