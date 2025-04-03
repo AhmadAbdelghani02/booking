@@ -89,9 +89,9 @@
                     <i class="bi bi-chat-square-dots fs-1 text-info"></i>
                     <h5 class="card-title mt-3">Total Reviews</h5>
                     <p class="card-text fs-4 fw-bold">{{ $totalReviews }}</p>
-                    <small class="text-muted d-block">
+                    {{-- <small class="text-muted d-block">
                         <i class="bi bi-star-half text-warning"></i> Avg. Rating: {{ number_format($averageRating, 1) }}
-                    </small>
+                    </small> --}}
                     <small class="text-muted d-block">
                         <i class="bi bi-hourglass-bottom text-danger"></i> Pending Approval: {{ $pendingReviews }}
                     </small>

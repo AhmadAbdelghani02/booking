@@ -42,11 +42,11 @@ class AdminController extends Controller
     $activeCoupons = Coupon::where('expiry_date', '>=', now())->count();
 
     $totalReviews = Review::count();
-    $averageRating = Review::avg('rating');
+    // $averageRating = Review::avg('rating');
     $pendingReviews = Review::whereNull('is_approved')->count();
 
     return view('admin.homepage.index', compact('totalHotels', 'totalUsers', 'totalRooms', 'totalBookings', 'totalCoupons', 'totalReviews', 'activeHotels', 'hotelWithMostReviews', 
-    'adminUsers', 'newUsersThisMonth', 'occupiedRooms', 'mostExpensiveRoom', 'pendingBookings', 'monthlyRevenue', 'activeCoupons', 'averageRating', 'pendingReviews'));
+    'adminUsers', 'newUsersThisMonth', 'occupiedRooms', 'mostExpensiveRoom', 'pendingBookings', 'monthlyRevenue', 'activeCoupons', 'pendingReviews'));
 }
 
 }
