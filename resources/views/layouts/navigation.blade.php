@@ -1,4 +1,4 @@
-<nav x-data="{ open: false }" class="bg-white-900 text-white shadow-lg">
+<nav x-data="{ open: false }" class="bg-white-900 text-white shadow-lg" style="position: sticky; top: 0; z-index: 10000; background-color: #f8fafc;">
     <div class="max-w-7xl mx-auto px-6 lg:px-8">
         <div class="flex justify-between items-center h-16">
             <!-- Logo -->
@@ -34,7 +34,7 @@
                 @auth
                 <a href="{{ route('profile.edit') }}" class="mr-3">
                     {{-- <i class="fa-solid fa-user text-black"></i> --}}
-                    <img src="{{ asset('storage/' . Auth::user()->image) }}" alt="" width="32" height="32" class="rounded-circle me-2" style="border-radius: 50%; width: 30px; height: 30px">
+                    <img src="{{ Auth::user()->image ? asset('storage/' . Auth::user()->image) : asset('images/default.png') }}" alt="" width="32" height="32" class="rounded-circle me-2" style="border-radius: 50%; width: 30px; height: 30px">
                 </a>
                     <x-dropdown align="right" width="48">
                         <x-slot name="trigger">
@@ -52,6 +52,9 @@
                                 <x-dropdown-link :href="route('profile.edit')">
                                     {{ __('Profile') }}
                                 </x-dropdown-link>
+                            <x-dropdown-link :href="route('reservations.my-reservations')">
+                                {{ __('My Reservations') }}
+                            </x-dropdown-link>
                                 <form method="POST" action="{{ route('logout') }}">
                                     @csrf
                                     <x-dropdown-link :href="route('logout')" onclick="event.preventDefault(); this.closest('form').submit();">

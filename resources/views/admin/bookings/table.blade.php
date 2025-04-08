@@ -85,7 +85,7 @@
     </div>        
     @else
     <tr>
-      <td colspan="9" class="text-center py-2 ">No Booking Found</td>
+      <td colspan="10" class="text-center py-2 ">No Booking Found</td>
     </tr>
   </tbody>
 </table>

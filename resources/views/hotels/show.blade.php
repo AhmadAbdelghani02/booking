@@ -254,12 +254,12 @@
                                 @if($hotel->images->count() > 0)
                                     @foreach($hotel->images as $key => $image)
                                         <div class="carousel-item {{ $key == 0 ? 'active' : '' }}">
-                                            <img src="{{ asset('storage/' . $image->image) }}" class="d-block w-100" alt="{{ $hotel->name }}">
+                                            <img src="{{ $image->image_path }}" class="d-block w-100" alt="{{ $hotel->name }}">
                                         </div>
                                     @endforeach
                                 @else
                                     <div class="carousel-item active">
-                                        <img src="{{ asset('storage/' . $hotel->image) }}" class="d-block w-100" alt="{{ $hotel->name }}">
+                                        <img src="{{ $hotel->image_path }}" class="d-block w-100" alt="{{ $hotel->name }}">
                                     </div>
                                 @endif
                             </div>
@@ -303,36 +303,7 @@
                                     </div>
                                 </div>
                             @endforeach
-                            <div class="col-md-4 mb-2">
-                                <div class="amenity-item d-flex align-items-center">
-                                    <i class="fas fa-wifi amenities-icon"></i> Free WiFi
-                                </div>
-                            </div>
-                            <div class="col-md-4 mb-2">
-                                <div class="amenity-item d-flex align-items-center">
-                                    <i class="fas fa-swimming-pool amenities-icon"></i> Swimming Pool
-                                </div>
-                            </div>
-                            <div class="col-md-4 mb-2">
-                                <div class="amenity-item d-flex align-items-center">
-                                    <i class="fas fa-dumbbell amenities-icon"></i> Fitness Center
-                                </div>
-                            </div>
-                            <div class="col-md-4 mb-2">
-                                <div class="amenity-item d-flex align-items-center">
-                                    <i class="fas fa-utensils amenities-icon"></i> Restaurant
-                                </div>
-                            </div>
-                            <div class="col-md-4 mb-2">
-                                <div class="amenity-item d-flex align-items-center">
-                                    <i class="fas fa-spa amenities-icon"></i> Spa
-                                </div>
-                            </div>
-                            <div class="col-md-4 mb-2">
-                                <div class="amenity-item d-flex align-items-center">
-                                    <i class="fas fa-parking amenities-icon"></i> Free Parking
-                                </div>
-                            </div>
+                            
                         </div>
                     </div>
                 </div>

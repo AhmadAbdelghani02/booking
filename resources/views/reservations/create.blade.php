@@ -326,6 +326,7 @@
                         couponMessage.classList.remove('text-green-600');
                         couponMessage.classList.add('text-red-600');
                         couponMessage.innerHTML = `<div class="flex items-center"><svg class="h-4 w-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>${data.message}</div>`;
+                        document.getElementById('couponId').value = data.data.coupon_id;
                         
                         // Reset coupon
                         resetCoupon();

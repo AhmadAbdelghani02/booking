@@ -10,7 +10,7 @@
 
 @section('content')
                   {{-- Table --}}
-              <div class="container m-5" style="max-height: 100%">
+              <div class="container" style="max-height: 100%">
                 <div class="my-3">
                   <h3>
                     <i class="bi bi-ticket-detailed"></i>
@@ -56,7 +56,7 @@
                 </div>
 
                 <!-- Bookings Table -->
-                <div id="userTable" style="display: none;">
+                <div class="table-responsive" id="userTable" style="display: none;">
                   @include('admin.bookings.table') <!-- Dynamically load table -->
                 </div>
 

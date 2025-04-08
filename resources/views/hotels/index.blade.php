@@ -407,7 +407,7 @@ h3.mb-3:before, h3.my-4:before {
     <div class="hotels-horizontal">
         @foreach($hotels->take(6) as $hotel)
         <div class="hotel-card-horizontal">
-            <img src="{{ asset($hotel->image) }}" class="card-img-top" alt="{{ $hotel->name }}">
+            <img src="{{ asset('storage/' . $hotel->image) }}" class="card-img-top" alt="{{ $hotel->name }}" style="width: 100%">
             <div class="card-body">
                 <h5 class="card-title">{{ $hotel->name }}</h5>
                 <p class="card-text">
@@ -434,7 +434,7 @@ h3.mb-3:before, h3.my-4:before {
     <div class="hotels-grid">
         @forelse($hotels as $hotel)
         <div class="hotel-card">
-            <img src="{{ asset($hotel->image) }}" class="card-img-top" alt="{{ $hotel->name }}">
+            <img src="{{ asset('storage/' . $hotel->image) }}" class="card-img-top" alt="{{ $hotel->name }}" style="width: 100%">
             <div class="card-body">
                 <h5 class="card-title">{{ $hotel->name }}</h5>
                 <div class="hotel-details-top">
@@ -969,9 +969,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         <p><strong>Region:</strong> ${hotel.region}</p>
                         <p>${hotel.description}</p>
                     </div>
-                    <div class="tooltip-footer">
-                        <a href="/hotels/${hotel.id}">View Details</a>
-                    </div>
+                   
                 `;
                 
                 return popupContent;

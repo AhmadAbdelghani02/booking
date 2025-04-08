@@ -64,7 +64,7 @@
                     <div class="mb-3">
                         <label for="price" class="form-label">Price ($)</label>
                         <input type="number" class="form-control" id="price" name="price" required
-                        placeholder="Enter the price"></input>
+                        placeholder="Enter the price" step="any"></input>
                     </div>
                     
                     <div class="d-flex gap-2 justify-content-end align-items-center">

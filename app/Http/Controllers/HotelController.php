@@ -48,7 +48,7 @@ class HotelController extends Controller
          })
          ->limit(4)
          ->get();
-         $reviews = $hotel->reviews()->with('user')->latest()->paginate(10);
+         $reviews = $hotel->reviews()->where('is_approved', '=', 1)->with('user')->latest()->paginate(10);
      return view('hotels.show', compact('hotel', 'similarHotels','reviews'));
  }
 }

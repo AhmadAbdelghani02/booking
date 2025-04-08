@@ -11,7 +11,7 @@
             <div class="p-4 sm:p-8 bg-white shadow sm:rounded-lg">
                 <div class="max-w-xl">
                     <div class="flex items-center space-x-4">
-                        <img class="w-16 h-16 rounded-full" src="{{ $user->profile_photo_url }}" alt="{{ $user->name }}">
+                        <img class="w-16 h-16 rounded-full" src="{{ $user->image != null ? $user->profile_photo_url : asset('images/default.png')  }}" alt="{{ $user->name }}">
                         <div>
                             <h3 class="text-lg font-medium text-gray-900">{{ $user->name }}</h3>
                             <p class="text-sm text-gray-600">{{ $user->email }}</p>

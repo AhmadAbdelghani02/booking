@@ -10,7 +10,7 @@
 
 @section('content')
                   {{-- Table --}}
-              <div class="container m-5" style="max-height: 100%">
+              <div class="container " style="max-height: 100%">
                 <div class="my-5">
                   <h3>
                     <i class="bi bi-chat-right-heart"></i>
@@ -46,7 +46,7 @@
                 </div>
 
                 <!-- Reviews Table -->
-                <div id="userTable" style="display: none;">
+                <div class="table-responsive" id="userTable" style="display: none;">
                   @include('admin.reviews.table') <!-- Dynamically load table -->
                 </div>
 
