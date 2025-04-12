@@ -93,9 +93,9 @@
     <body>
         <div class="page-container">
             <div class="logo-container">
-                <a href="/" class="block">
+                {{-- <a href="/" class="block">
                     <x-application-logo class="w-24 h-24 fill-current text-primary-600" />
-                </a>
+                </a> --}}
             </div>
 
             <div class="card">

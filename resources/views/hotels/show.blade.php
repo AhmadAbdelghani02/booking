@@ -503,7 +503,7 @@
         
         <!-- Similar Hotels -->
         @if($similarHotels->count() > 0)
-        <div class="mt-5">
+        <div class="m-5">
             <h3 class="mb-4"><i class="fas fa-building me-2"></i>Similar Hotels You May Like</h3>
             <div class="row row-cols-1 row-cols-md-4 g-4">
                 @foreach($similarHotels as $similarHotel)

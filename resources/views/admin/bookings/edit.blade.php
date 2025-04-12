@@ -40,7 +40,7 @@
                     </div> 
                     <div class="mb-3">
                         <label for="coupon_id" class="form-label">Coupon</label>
-                        <select class="form-select" id="coupon_id" name="coupon_id" required>
+                        <select class="form-select" id="coupon_id" name="coupon_id">
                             <option value="{{ $booking->coupon_id ?? '' }}" selected >{{ $booking->coupon->code ?? 'No coupon' }}</option>
                             @foreach ($coupons as $coupon)
                                 @if ($coupon->id != $booking->coupon_id)
@@ -68,7 +68,7 @@
                         value="{{ $booking->price }}"></input>
                     </div>
                     <div class="mb-3">
-                        <label for="status" class="form-label">Room Type</label>
+                        <label for="status" class="form-label">Status</label>
                             <select class="form-select" id="status" name="status" required>
                                 <option value="{{ $booking->status }}">The booking status is {{ $booking->status }}</option> 
                                     <option value="cancelled" name="cancelled">

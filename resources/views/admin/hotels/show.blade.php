@@ -8,7 +8,7 @@
 @endsection
 
 @section('content')
-<div class="container m-5">
+<div class="container">
     <div class="my-3">
         <h3>
             <i class="bi bi-123"></i>

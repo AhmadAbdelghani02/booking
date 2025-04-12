@@ -10,7 +10,7 @@
 
 @section('content')
                   {{-- Table --}}
-              <div class="container m-5" style="max-height: 100%">
+              <div class="container" style="max-height: 100%">
                 <div class="my-3">
                   <h3>
                     <i class="bi bi-speedometer2"></i>
