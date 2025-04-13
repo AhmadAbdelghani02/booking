@@ -1,26 +1,32 @@
-🏨 JoHotels - Hotel Booking Website 🗺️
+# 🏨 JoHotels - Hotel Booking Website 🗺️
+
 JoHotels is a comprehensive web application for booking hotels across Jordan 🌍. Designed to provide a seamless experience for both users and administrators, the platform offers features like hotel management, secure user authentication 🔐, and dynamic data visualization 📊. Built using modern web technologies, JoHotels ensures responsive design 📱 and functionality across devices.
-🚀 Technologies Used
+
+## 🚀 Technologies Used
+
 JoHotels leverages the following technologies:
-- 🌐 Frontend: HTML, CSS, JavaScript, Bootstrap
-- ⚙️ Backend: Laravel framework (Blade templates, Middleware, Laravel Breeze)
-- 🗄️ Database: MySQL
-- 📈 Other Tools: Laravel Charts for data visualization, PHP for backend logic
+- 🌐 **Frontend**: HTML, CSS, JavaScript, Bootstrap
+- ⚙️ **Backend**: Laravel framework (Blade templates, Middleware, Laravel Breeze)
+- 🗄️ **Database**: MySQL
+- 📈 **Other Tools**: Laravel Charts for data visualization, PHP for backend logic
 
-⭐ Features
-🌟 User-Facing Features:
-- Responsive Design: The website is fully responsive, ensuring usability on all devices (desktop 💻, tablet 📟, mobile 📱).
-- User Registration & Authentication: Built with Laravel Breeze for easy and secure user registration.
-- Hotel Search & Booking: Users can browse hotels 🏨, view details 📄, and book accommodations ✈️.
+## ⭐ Features
 
+### 🌟 User-Facing Features:
+- **Responsive Design**: The website is fully responsive, ensuring usability on all devices (desktop 💻, tablet 📟, mobile 📱).
+- **User Registration & Authentication**: Built with Laravel Breeze for easy and secure user registration.
+- **Hotel Search & Booking**: Users can browse hotels 🏨, view details 📄, and book accommodations ✈️.
 
-🛠️ Admin Dashboard Features:
-- CRUD Operations: Admins can manage hotels, regions, and bookings with intuitive CRUD functionality ✏️📦.
-- Middleware for Authentication: Ensures that only authorized users 👤 can access the admin panel.
-- Data Visualization: Utilizes Laravel Charts 📊 to provide insights on bookings and user activity.
+### 🛠️ Admin Dashboard Features:
+- **CRUD Operations**: Admins can manage hotels, regions, and bookings with intuitive CRUD functionality ✏️📦.
+- **Middleware for Authentication**: Ensures that only authorized users 👤 can access the admin panel.
+- **Data Visualization**: Utilizes Laravel Charts 📊 to provide insights on bookings and user activity.
 
-🛠️ Installation Steps
+## 🛠️ Installation Steps
+
 Follow these steps to install and run the JoHotels project on your local machine:
+
+
 - 📥 Clone the Repository:git clone https://github.com/Ahmad-Arabi/Laravel_Project
 cd Laravel_Project
 
