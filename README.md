@@ -1,66 +1,44 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+🏨 JoHotels - Hotel Booking Website 🗺️
+JoHotels is a comprehensive web application for booking hotels across Jordan 🌍. Designed to provide a seamless experience for both users and administrators, the platform offers features like hotel management, secure user authentication 🔐, and dynamic data visualization 📊. Built using modern web technologies, JoHotels ensures responsive design 📱 and functionality across devices.
+🚀 Technologies Used
+JoHotels leverages the following technologies:
+- 🌐 Frontend: HTML, CSS, JavaScript, Bootstrap
+- ⚙️ Backend: Laravel framework (Blade templates, Middleware, Laravel Breeze)
+- 🗄️ Database: MySQL
+- 📈 Other Tools: Laravel Charts for data visualization, PHP for backend logic
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+⭐ Features
+🌟 User-Facing Features:
+- Responsive Design: The website is fully responsive, ensuring usability on all devices (desktop 💻, tablet 📟, mobile 📱).
+- User Registration & Authentication: Built with Laravel Breeze for easy and secure user registration.
+- Hotel Search & Booking: Users can browse hotels 🏨, view details 📄, and book accommodations ✈️.
 
-## About Laravel
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+🛠️ Admin Dashboard Features:
+- CRUD Operations: Admins can manage hotels, regions, and bookings with intuitive CRUD functionality ✏️📦.
+- Middleware for Authentication: Ensures that only authorized users 👤 can access the admin panel.
+- Data Visualization: Utilizes Laravel Charts 📊 to provide insights on bookings and user activity.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+🛠️ Installation Steps
+Follow these steps to install and run the JoHotels project on your local machine:
+- 📥 Clone the Repository:git clone https://github.com/Ahmad-Arabi/Laravel_Project
+cd Laravel_Project
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+- 📦 Install Dependencies: Run the following command to install PHP dependencies using Composer:composer install
 
-## Learning Laravel
+- ⚙️ Set Up the Environment File: Create a .env file in the root directory by copying the .env.example file:cp .env.example .env
+Update the .env file with your database credentials.
+- 🔑 Generate Application Key:php artisan key:generate
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+- 🗄️ Migrate the Database: Run the migration to set up database tables:php artisan migrate
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+- 💾 Seed the Database (Optional): If you have seeders to populate the database with sample data, use:php artisan db:seed
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+- 📦 Install Node.js Dependencies:npm install
 
-## Laravel Sponsors
+- 📁 Build Frontend Assets:npm run dev
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+- ▶️ Run the Application: Start the Laravel server:php artisan serve
+Access the website at http://127.0.0.1:8000.
 
-### Premium Partners
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
