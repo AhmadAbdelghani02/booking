@@ -8,6 +8,7 @@ use App\Http\Controllers\ReviewController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\AdminRoomsController;
 use App\Http\Controllers\AdminUsersController;
+use App\Http\Controllers\AdminChartsController;
 use App\Http\Controllers\AdminHotelsController;
 use App\Http\Controllers\ReservationController;
 use App\Http\Controllers\AdminCouponsController;
@@ -108,6 +109,9 @@ Route::prefix('admin')->name('admin.')->middleware('checkAdmin')->group(function
     Route::get('/reviews', [AdminReviewsController::class, 'index'])->name('reviews.index');
     Route::delete('/reviews/{id}', [AdminReviewsController::class, 'destroy'])->name('reviews.destroy');
     Route::post('/reviews/{id}/{actionType}', [AdminReviewsController::class, 'update'])->name('reviews.update');
+
+    //Charts CRUD
+    Route::get('/charts', [AdminChartsController::class, 'index'])->name('charts.index');
 });
 
 

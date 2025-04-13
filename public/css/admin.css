@@ -1,6 +1,8 @@
-.drop-border {
-  border: 0px;
-  background-color: transparent;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 :root {
@@ -8,6 +10,12 @@
   --accent-color: rgb(125, 209, 223);   
   --secondary-color: rgb(181, 229, 231); 
 }
+
+.drop-border {
+  border: 0px;
+  background-color: transparent;
+}
+
 
 body {
   background-color: #e8e8e8;
@@ -125,92 +133,132 @@ body {
 }
 
 
-        /* Custom styles for responsive sidebar */
-        body {
-            overflow-x: hidden; /* Prevent horizontal scroll on the body */
-        }
-        
-        #sidebar {
-            width: 280px;
-            height: 100vh;
-            position: fixed;
-            left: 0;
-            top: 0;
-            z-index: 1000;
-            transition: all 0.3s;
-            background-color: #212529;
-        }
-        
-        #content {
-            margin-left: 280px;
-            transition: all 0.3s;
-            padding: 20px;
-            width: calc(100% - 280px); /* Ensure content width is calculated correctly */
-            min-height: 100vh;
-        }
-        
-        #sidebarCollapse {
-            display: none;
-            position: fixed;
-            top: 10px;
-            right: 10px;
-            z-index: 1001;
-            background-color: var(--main-color);
-            border: none;
-            box-shadow:  rgba(50, 50, 93, 0.25) 0px 30px 50px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 26px -18px inset;
-        }
-        
-        /* Table container with horizontal scroll when needed */
-        .table-responsive {
-            overflow-x: auto;
-            -webkit-overflow-scrolling: touch;
-            width: 100%;
-        }
-        
-        /* Ensure tables don't exceed their container */
-        .table {
-            width: 100%;
-            max-width: 100%;
-            margin-bottom: 1rem;
-            table-layout: auto;
-        }
-        
-        @media (max-width: 768px) {
-            #sidebar {
-                margin-left: -280px;
-            }
-            
-            #content {
-                margin-left: 0;
-                width: 100%;
-            }
-            
-            #sidebarCollapse {
-                display: block;
-            }
-            
-            #sidebar.active {
-                margin-left: 0;
-            }
+/* Custom styles for responsive sidebar */
+body {
+    overflow-x: hidden; /* Prevent horizontal scroll on the body */
+}
 
-            #spinner {
-              left: calc(50%); 
-            }
-            /* Apply smaller font size to table on mobile */
-            .table {
-                font-size: 0.85rem;
-            }
-            
-            /* Make certain columns hidden or smaller on mobile */
-            .table .mobile-hide {
-                display: none;
-            }
-            
-            .table .mobile-small {
-                width: 60px;
-                max-width: 60px;
-                white-space: nowrap;
-                overflow: hidden;
-                text-overflow: ellipsis;
-            }
-        }
+#sidebar {
+    width: 280px;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+    transition: all 0.3s;
+    background-color: #212529;
+}
+
+#content {
+    margin-left: 280px;
+    transition: all 0.3s;
+    padding: 20px;
+    width: calc(100% - 280px); /* Ensure content width is calculated correctly */
+    min-height: 100vh;
+}
+
+#sidebarCollapse {
+    display: none;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 1001;
+    background-color: var(--main-color);
+    border: none;
+    box-shadow:  rgba(50, 50, 93, 0.25) 0px 30px 50px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 26px -18px inset;
+}
+
+/* Table container with horizontal scroll when needed */
+.table-responsive {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    width: 100%;
+}
+
+/* Ensure tables don't exceed their container */
+.table {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 1rem;
+    table-layout: auto;
+}
+
+@media (max-width: 768px) {
+    #sidebar {
+        margin-left: -280px;
+    }
+    
+    #content {
+        margin-left: 0;
+        width: 100%;
+    }
+    
+    #sidebarCollapse {
+        display: block;
+    }
+    
+    #sidebar.active {
+        margin-left: 0;
+    }
+
+    #spinner {
+      left: calc(50%); 
+    }
+    /* Apply smaller font size to table on mobile */
+    .table {
+        font-size: 0.85rem;
+    }
+    
+    /* Make certain columns hidden or smaller on mobile */
+    .table .mobile-hide {
+        display: none;
+    }
+    
+    .table .mobile-small {
+        width: 60px;
+        max-width: 60px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+
+.dashboard_tiles a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: var(--main-color);
+    border-radius: 50%;
+    padding: 10px;
+}
+
+.chart:hover {
+    transform: scale(1.00);
+
+}
+
+h3 {
+  cursor: default;
+  user-select: none;
+  width: fit-content;
+  border-bottom: 2px solid rgba(50, 50, 93, 0.25);
+  padding-bottom: 10px;
+  transition: ease-in-out 0.5s;
+
+}
+
+h3:hover {
+  border-bottom: 2px solid rgba(81, 141, 209, 0.433);
+  transition: ease-in-out 0.5s;
+}
+   
+
+.form-check-input:checked {
+  background-color:var(--main-color);
+  border-color: var(--main-color);
+}
+

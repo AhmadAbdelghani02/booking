@@ -1,7 +1,7 @@
-<div class="container my-5">
-    <div class="row g-5">
+<div class="container m-5">
+    <div class="row g-5 dashboard_tiles">
         <!-- Total Hotels -->
-        <div class="col-md-4 ">
+        <a href="{{ route("admin.hotels.index") }}" class="col-md-4 ">
             <div class="card text-center">
                 <div class="card-body">
                     <i class="bi bi-building fs-1 text-primary"></i>
@@ -15,10 +15,10 @@
                     </small>
                 </div>
             </div>
-        </div>
+        </a>
   
         <!-- Total Users -->
-        <div class="col-md-4">
+        <a href="{{ route("admin.users.index") }}" class="col-md-4">
             <div class="card text-center">
                 <div class="card-body">
                     <i class="bi bi-people fs-1 text-secondary"></i>
@@ -32,10 +32,10 @@
                     </small>
                 </div>
             </div>
-        </div>
+        </a>
   
         <!-- Total Rooms -->
-        <div class="col-md-4">
+        <a href="{{ route("admin.rooms.index") }}" class="col-md-4">
             <div class="card text-center">
                 <div class="card-body">
                     <i class="bi bi-door-open fs-1 text-success"></i>
@@ -49,10 +49,10 @@
                     </small>
                 </div>
             </div>
-        </div>
+        </a>
   
         <!-- Total Bookings -->
-        <div class="col-md-4">
+        <a href="{{ route("admin.bookings.index") }}" class="col-md-4">
             <div class="card text-center">
                 <div class="card-body">
                     <i class="bi bi-calendar-check fs-1 text-warning"></i>
@@ -66,10 +66,10 @@
                     </small>
                 </div>
             </div>
-        </div>
+        </a>
   
         <!-- Total Coupons -->
-        <div class="col-md-4">
+        <a href="{{ route("admin.coupons.index") }}" class="col-md-4">
             <div class="card text-center">
                 <div class="card-body">
                     <i class="bi bi-ticket-perforated fs-1 text-danger"></i>
@@ -80,10 +80,10 @@
                     </small>
                 </div>
             </div>
-        </div>
+        </a>
   
         <!-- Total Reviews -->
-        <div class="col-md-4">
+        <a href="{{ route("admin.reviews.index") }}" class="col-md-4">
             <div class="card text-center">
                 <div class="card-body">
                     <i class="bi bi-chat-square-dots fs-1 text-info"></i>
@@ -97,6 +97,6 @@
                     </small>
                 </div>
             </div>
-        </div>
+        </a>
     </div>
   </div>

@@ -68,6 +68,12 @@
                         </a>
                     </li>
                     <li>
+                        <a href="{{route('admin.charts.index')}}" class="nav-link {{ request()->routeIs('admin.charts.index') ? 'active' : 'text-white' }}">
+                            <i class="bi bi-graph-up-arrow"></i>
+                            Charts & Statistics
+                        </a>
+                    </li>
+                    <li>
                         <a href="{{route('home')}}" class="nav-link text-white ">
                             <i class="bi bi-house"></i>
                             Exit the dashboard

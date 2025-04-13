@@ -2,26 +2,28 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use App\Models\Hotel;
 use App\Models\Room;
+use App\Models\Hotel;
+use App\Models\Region;
+use Illuminate\Http\Request;
 
 class AdminHotelsController extends Controller
 {
     public function index(Request $request) {
 
         $hotels = Hotel::orderBy('created_at', 'desc')->paginate(7);
+        $regions = Region::all();
 
         if ($request->ajax()) {
-            return view('admin.hotels.table', compact('hotels'))->render();
+            return view('admin.hotels.table', compact('hotels', 'regions'))->render();
         }
     
-        return view('admin.hotels.index', compact('hotels'));
+        return view('admin.hotels.index', compact('hotels', 'regions'));
     
     }
 
     public function create() {
-        
+
         return view('admin.hotels.create');
 
     }
@@ -36,7 +38,12 @@ class AdminHotelsController extends Controller
 
         $validatedData = $request->validate([
             'name' => 'required|string',
+            'is_featured' => 'nullable|boolean',
+            'region_id' => 'required|exists:regions,id',
+            'longitude' => 'required|numeric',
+            'latitude' => 'required|numeric',
             'address' => 'required|string',
+            'stars' => 'required|integer|between:1,5',
             'description' => 'required|string',    
             'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
         ]);
@@ -54,15 +61,16 @@ class AdminHotelsController extends Controller
     public function edit($id)
     {
         $hotel = Hotel::findOrFail($id);
-
+        $regions = Region::all();
+   
         if (request()->ajax()) {
             // Render the edit modal view with the order data
-            $view = view('admin.hotels.edit', compact('hotel'))->render();
+            $view = view('admin.hotels.edit', compact('hotel', 'regions'))->render();
             return response()->json(['html' => $view]);
         }
 
         // Fallback: Return a full view if the request is not AJAX (optional)
-        return view('admin.hotels.edit', compact('hotel'));
+        return view('admin.hotels.edit', compact('hotel', 'regions'));
     }
 
     public function update(Request $request, $id)
@@ -70,7 +78,12 @@ class AdminHotelsController extends Controller
         $validatedData = $request->validate([
             'name' => 'required|string',
             'address' => 'required|string',
-            'description' => 'required|string',    
+            'is_featured' => 'nullable|boolean',
+            'longitude' => 'required|numeric',
+            'latitude' => 'required|numeric',
+            'description' => 'required|string', 
+            'region_id' => 'required|exists:regions,id',   
+            'stars' => 'required|integer|between:1,5',
             'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048'
         ], [
             'image.max' => 'Image size is too big. Maximum size is 2MB.',
